@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muni Satipo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+</head>
+<body>
+  <header class="header" aria-label="Encabezado principal">
+    <div class="container">
+      <img src="img/logo.jpeg" alt="Logo Municipalidad Satipo" class="logo" />
+      <nav class="navbar" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="lugaresTuristicos.html">Lugares turisticos</a></li>
+          <li><a href="obras.html">Obras</a></li>
+          <li><a href="ubicanos.html">Ubicanos</a></li>
+        </ul>
+      </nav>
+      <a href="ubicanos.html" class="btn-contacto">Contáctanos</a>
+    </div>
+  </header>
+ 
+ <main>
+ <h1>Lugares Turísticos de Satipo</h1>
+    <p>Explora la belleza natural y cultural de nuestra tierra</p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="img/tina de piedra.jpg" alt="Catarata Tina de Piedra">
+        <h3>Catarata Tina de Piedra</h3>
+      </div>
+      <div class="card">
+        <img src="img/valle del perene.jpeg" alt="Valle del Perené">
+        <h3>Valle del Perené</h3>
+      </div>
+      <div class="card">
+        <img src="img/laguna encantada.jpeg" alt="Laguna Encantada">
+        <h3>Laguna Encantada</h3>
+      </div>
+      <div class="card">
+        <img src="img/cueva del valle.jpg" alt="Cueva del Valle Sagrado">
+        <h3>Cueva del Valle Sagrado</h3>
+      </div>
+      <div class="card">
+        <img src="img/bosque ashaninka.jpg" alt="Bosque Asháninka">
+        <h3>Bosque Asháninka</h3>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="redes">
+        <a href="#" aria-label="Facebook"><img src="img/logo facebok.avif" alt="Facebook" /></a>
+        <a href="#" aria-label="Twitter"><img src="img/logo twiter.png" alt="Twitter" /></a>
+        <a href="#" aria-label="Instagram"><img src="img/logo instagram.avif" alt="Instagram" /></a>
+      </div>
+      <div class="legal">
+        <p>&copy; 2025 Municipalidad de Satipo. Todos los derechos reservados.</p>
+        <a href="#">Términos de uso</a> | <a href="#">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+    <script>
+    const images = document.querySelectorAll('.interactive img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        modal.classList.add('active');
+        modalImg.src = img.src;
+      });
+    });
+
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

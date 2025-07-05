@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muni Satipo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  
+</head>
+<body>
+  <header class="header" aria-label="Encabezado principal">
+    <div class="container">
+      <img src="img/logo.jpeg" alt="Logo Municipalidad Satipo" class="logo" />
+      <nav class="navbar" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="lugaresTuristicos.html">Lugares turisticos</a></li>
+          <li><a href="obras.html">Obras</a></li>
+          <li><a href="ubicanos.html">Ubicanos</a></li>
+        </ul>
+      </nav>
+      <a href="ubicanos.html" class="btn-contacto">Contáctanos</a>
+    </div>
+  </header>
+ 
+
+
+
+  <main>
+      <h1>Historia de Satipo</h1>
+    <p>Descubre los orígenes, crecimiento y cultura de nuestra hermosa tierra</p>
+    <section>
+      <h2>Orígenes</h2>
+      <p>Satipo, ubicada en la selva central del Perú, tiene una rica historia que comienza con las comunidades indígenas como los Asháninkas, quienes han habitado la zona por siglos. Su sabiduría y respeto por la naturaleza siguen siendo pilares culturales de la región.</p>
+      <div class="interactive">
+        <img src="img/comunidad ashaninka.jpg" alt="Comunidad Asháninka">
+        <img src="img/naturaleza satipo.jpg" alt="Naturaleza de Satipo">
+      </div>
+    </section>
+
+    <section>
+      <h2>Época Colonial y Moderna</h2>
+      <p>Durante la época colonial, Satipo fue una región de difícil acceso. Su desarrollo tomó fuerza en el siglo XX, con la construcción de carreteras y migraciones de diversas partes del país que enriquecieron su diversidad cultural.</p>
+      <div class="interactive">
+        <img src="img/carreteras era colonial.jpg" alt="Construcción de carreteras">
+        <img src="img/plaza satipo.jpg" alt="Plaza de Satipo">
+      </div>
+    </section>
+
+    <section>
+      <h2>Cultura y Tradiciones</h2>
+      <p>Satipo celebra con orgullo sus festividades como el Carnaval Satipense y mantiene vivas sus tradiciones a través de la música, danzas típicas y ferias artesanales que atraen tanto a locales como a visitantes.</p>
+      <div class="interactive">
+        <img src="img/carnavales.jpg" alt="Carnaval Satipense">
+        <img src="img/danza.png" alt="Danza Típica">
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="imageModal">
+    <img id="modalImg" src="" alt="Imagen ampliada">
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="redes">
+        <a href="#" aria-label="Facebook"><img src="img/logo facebok.avif" alt="Facebook" /></a>
+        <a href="#" aria-label="Twitter"><img src="img/logo twiter.png" alt="Twitter" /></a>
+        <a href="#" aria-label="Instagram"><img src="img/logo instagram.avif" alt="Instagram" /></a>
+      </div>
+      <div class="legal">
+        <p>&copy; 2025 Municipalidad de Satipo. Todos los derechos reservados.</p>
+        <a href="#">Términos de uso</a> | <a href="#">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+    <script>
+    const images = document.querySelectorAll('.interactive img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        modal.classList.add('active');
+        modalImg.src = img.src;
+      });
+    });
+
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

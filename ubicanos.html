@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muni Satipo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+</head>
+<body>
+  <header class="header" aria-label="Encabezado principal">
+    <div class="container">
+      <img src="img/logo.jpeg" alt="Logo Municipalidad Satipo" class="logo" />
+      <nav class="navbar" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="lugaresTuristicos.html">Lugares turisticos</a></li>
+          <li><a href="obras.html">Obras</a></li>
+          <li><a href="ubicanos.html">Ubicanos</a></li>
+        </ul>
+      </nav>
+      <a href="ubicanos.html" class="btn-contacto">Contáctanos</a>
+    </div>
+  </header>
+ 
+ <main>
+    <h1>Ubícanos</h1>
+    <p>Encuentra nuestras oficinas fácilmente</p>
+    <div class="map-container">
+        
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.8287902609757!2d-74.63404178577954!3d-11.254120090002967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e9ed567c0832f%3A0xd4162dbe3c6f8771!2sSatipo!5e0!3m2!1ses!2spe!4v1653425184983!5m2!1ses!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="info">
+      <p><strong>Dirección:</strong> Plaza Principal, Municipalidad de Satipo</p>
+      <p><strong>Teléfono:</strong> +51 000 000 000</p>
+      <p><strong>Email:</strong> contacto@satip.gob.pe</p>
+      <p><strong>Horario de atención:</strong> Lunes a Viernes, 8:00 am - 5:00 pm</p>
+    </div>
+  </main>
+
+
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="redes">
+        <a href="#" aria-label="Facebook"><img src="img/logo facebok.avif" alt="Facebook" /></a>
+        <a href="#" aria-label="Twitter"><img src="img/logo twiter.png" alt="Twitter" /></a>
+        <a href="#" aria-label="Instagram"><img src="img/logo instagram.avif" alt="Instagram" /></a>
+      </div>
+      <div class="legal">
+        <p>&copy; 2025 Municipalidad de Satipo. Todos los derechos reservados.</p>
+        <a href="#">Términos de uso</a> | <a href="#">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+    <script>
+    const images = document.querySelectorAll('.interactive img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        modal.classList.add('active');
+        modalImg.src = img.src;
+      });
+    });
+
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

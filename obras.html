@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muni Satipo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+</head>
+<body>
+  <header class="header" aria-label="Encabezado principal">
+    <div class="container">
+      <img src="img/logo.jpeg" alt="Logo Municipalidad Satipo" class="logo" />
+      <nav class="navbar" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="lugaresTuristicos.html">Lugares turisticos</a></li>
+          <li><a href="obras.html">Obras</a></li>
+          <li><a href="ubicanos.html">Ubicanos</a></li>
+        </ul>
+      </nav>
+      <a href="ubicanos.html" class="btn-contacto">Contáctanos</a>
+    </div>
+  </header>
+ 
+ <main>
+    <h1>Obras Realizadas</h1>
+    <p>Comprometidos con el desarrollo de Satipo</p>
+    <div class="grid">
+      <div class="card">
+        <img src="img/hospiptal.jpg" alt="Centro de Salud Nuevo">
+        <div class="info">
+          <h3>Centro de Salud Ampliado</h3>
+          <p>Ampliación y equipamiento del centro de salud en el distrito central.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/asfaltado.jpg" alt="Carretera asfaltada">
+        <div class="info">
+          <h3>Mejoramiento Vial</h3>
+          <p>Pavimentación de calles y vías principales para facilitar el transporte.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/parque ecologico.webp" alt="Parque Recreativo">
+        <div class="info">
+          <h3>Nuevo Parque Recreativo</h3>
+          <p>Construcción de áreas verdes y zonas de juegos para niños.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/colegio.jpg" alt="Escuela Renovada">
+        <div class="info">
+          <h3>Infraestructura Educativa</h3>
+          <p>Renovación de aulas y mobiliario escolar en instituciones públicas.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="redes">
+        <a href="#" aria-label="Facebook"><img src="img/logo facebok.avif" alt="Facebook" /></a>
+        <a href="#" aria-label="Twitter"><img src="img/logo twiter.png" alt="Twitter" /></a>
+        <a href="#" aria-label="Instagram"><img src="img/logo instagram.avif" alt="Instagram" /></a>
+      </div>
+      <div class="legal">
+        <p>&copy; 2025 Municipalidad de Satipo. Todos los derechos reservados.</p>
+        <a href="#">Términos de uso</a> | <a href="#">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+    <script>
+    const images = document.querySelectorAll('.interactive img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        modal.classList.add('active');
+        modalImg.src = img.src;
+      });
+    });
+
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
